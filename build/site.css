@@ -1,0 +1,27 @@
+#landing {
+  background-color: #faf9f6ff;
+  /* font-family: 'Lato'; */
+}
+
+footer {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-top {
+  background-color: #000000e8;
+}
+
+.footer-bottom {
+  background-color: #000000ff;
+}
+
+.navbar-top {
+  background-color: #faf9f6ff;
+}
+
+.navbar-bottom {
+  background-color: #c2b280ff;
+}
