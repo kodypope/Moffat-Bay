@@ -1,4 +1,5 @@
-/* General reset */
+
+General reset
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,9 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    color: white;
+    /* color: white; */
+      background-color: #f4f4f4;
+
     text-align: center;
 }
 
@@ -29,7 +32,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: #333;
+  color: #fff;
 }
 
 header .logo img {
@@ -39,6 +44,10 @@ header .logo img {
 nav ul {
     display: flex;
     list-style: none;
+    list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
@@ -46,7 +55,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    /* color: white; */
+      color: #fff;
+
     text-decoration: none;
     font-size: 1.1em;
     position: relative;
@@ -110,10 +121,14 @@ nav ul li a:hover::after {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+      background-color: #333;
+
     padding: 20px 5%;
     text-align: center;
-    color: #ccc;
+    /* color: #ccc; */
+      color: #fff;
+
     font-size: 0.9em;
 }
 
@@ -358,3 +373,94 @@ footer {
     margin: 20px auto 0;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.accommodations {
+  text-align: center;
+}
+
+.room {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 600px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  height: 10vh; /* Full viewport height */
+}
+
+.left {
+  flex: 1;
+  background-color: lightblue; /* Just for visualization */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top,
+.bottom {
+  flex: 1;
+  background-color: lightcoral; /* Just for visualization */
+  margin: 5px; /* Optional: Adds space between the divs */
+}
+
