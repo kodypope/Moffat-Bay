@@ -1,0 +1,146 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.login-box {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    max-width: 850px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.login-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.login-left h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-left h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.signin-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    width: auto;
+    margin: 20px 0;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #007BFF;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login-right {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-right img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.login-right p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-right ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.login-right li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.join-now-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+}
