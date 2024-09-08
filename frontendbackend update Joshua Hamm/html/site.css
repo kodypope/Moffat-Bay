@@ -29,13 +29,18 @@ header {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  background-color: #c2b280ff;
+  /* padding: 20px 5%; */
+  /* background-color: #c2b280ff; */
+  background-color: #f4f4f4;
   color: #fff;
 }
 
 header .logo img {
   height: 50px;
+}
+
+.navbar-top {
+  background-color: #c2b280ff;
 }
 
 nav ul {
@@ -183,7 +188,7 @@ footer {
 .join-box,
 .login-box,
 .landing-box {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #f4f4f4;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -259,6 +264,7 @@ header nav ul {
   display: flex;
   list-style: none;
   padding: 0;
+  height: 10%;
 }
 
 header nav ul li {
@@ -312,6 +318,10 @@ footer {
     minmax(100px, 1fr)
   ); /* Adjusts number of columns based on available space */
   gap: 10px; /* Adds space between images */
+}
+
+.res-button {
+  color: #1e90ff;
 }
 
 .image-grid img {
