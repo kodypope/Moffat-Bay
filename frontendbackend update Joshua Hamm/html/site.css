@@ -41,7 +41,24 @@ header .logo img {
 
 .navbar-top {
   background-color: #c2b280ff;
+  flex: auto;
+  flex-direction: row;
+
 }
+
+.font1 {
+  font: arial;
+}
+
+
+
+.comfortaa-font2 {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 nav ul {
   display: flex;
@@ -122,11 +139,31 @@ nav ul li a:hover::after {
 }
 
 footer {
-  background-color: #333;
-  padding: 5px 3%;
-  text-align: center;
+  background-color: #000000ff;
+  /* padding: 5px 3%; */
+  /* text-align: center; */
   color: #fff;
-  font-size: 0.9em;
+  /* font-size: 0.8em; */
+  /* position: relative; */
+  /* margin: 0;
+    padding: 0;
+    height: 25px;
+        /* margin-top: -10px; Adjust as needed */
+    /* vertical-align: top; */
+ /* text-align: center; */
+  /* padding: 10px; */
+  /* background-color: #f8f8f8; */
+  /* position: fixed; */
+  /* width: 100%; */
+  /* bottom: 0; */
+        /* margin-top: 5px; */ */
+}
+
+footer p {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* padding-top: 5px; */
+  
 }
 
 /* Blur effect */
@@ -302,14 +339,7 @@ main {
   border-radius: 5px;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  /* background-color: #f8f8f8; */
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
+
 
 .image-grid {
   display: grid;
@@ -321,7 +351,8 @@ footer {
 }
 
 .res-button {
-  color: #1e90ff;
+  background-color: #1e90ff;
+  padding: 5px;
 }
 
 .image-grid img {
@@ -332,11 +363,10 @@ footer {
 .our-story {
   /* max-width: 800px; */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #000000ff;
   /* border-radius: 10px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
-  background-color: #333;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -360,5 +390,5 @@ footer {
 
 .navbar-bottom {
   background-color: #1e90ff;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
