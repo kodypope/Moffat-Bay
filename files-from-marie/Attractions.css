@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d3a4;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    max-height: 50px;
+}
+
+.nav-top {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-top a:hover {
+    text-decoration: underline;
+}
+
+.reservation-button {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #d3d3a4;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #000;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.attractions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.attraction {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s; 
+}
+
+.attraction:hover {
+    transform: scale(1.05); 
+}
+
+.attraction img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+
+.attraction img:hover {
+    transform: scale(1.05); 
+}
+
+.attraction-info {
+    text-align: center; 
+}
+
+.attraction-info h3 {
+    margin-top: 10px;
+    font-size: 1.2em; 
+}
+
+.attraction-info p {
+    margin: 5px 0;
+}
+
+.additional-info {
+    padding: 20px;
+    background-color: black; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    text-align: center; 
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.additional-info h2 {
+    margin-bottom: 10px; 
+    color: white;
+}
+
+.additional-info p {
+    line-height: 1.6; 
+    color: white; 
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: -1px; 
+}
+
+.footer-navbar {
+    margin-bottom: 10px;
+}
+
+.footer-navbar a {
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #000;
+    color: white;
+}
+
+.footer-navbar a:hover {
+    text-decoration: underline;
+}

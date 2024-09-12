@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: white;
+}
+
+.header {
+    background: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.header-links li {
+    display: inline;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.navbar {
+    background-color: #e6dfa4; /* Adjust if needed */
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar .menu a.btn {
+    background-color: #faf8f0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: black;
+}
+
+.column {
+    width: 45%;
+}
+
+.column h2 {
+    color: white;
+}
+
+.column p {
+    font-size: 14px;
+}
+
+.footer {
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #afafaf;
+    margin: 10px 0 0;
+}
