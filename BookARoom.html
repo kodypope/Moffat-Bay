@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Room</title>
+    <link rel="stylesheet" href="bookaroomstyles.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1 class="booking-title">Book a Room</h1>
+
+        <!-- Date and Guest Selection -->
+        <div class="selection-container">
+            <label for="checkin-date">Check-in Date:</label>
+            <input type="date" id="checkin-date" name="checkin-date">
+
+            <label for="checkout-date">Check-out Date:</label>
+            <input type="date" id="checkout-date" name="checkout-date">
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10">
+        </div>
+
+        <!-- Room Option 1 -->
+        <div class="room-container">
+            <img src="image1.jpg" alt="Double Full Room" class="room-image">
+            <div class="room-details">
+                <h2>Double Full Room</h2>
+                <hr class="divider">
+                <p class="description">
+                    A room with two full-sized beds, perfect for families or small groups. 
+                    Enjoy complimentary Wi-Fi, flat-screen TV, and cozy bedding. 
+                    The room offers ample space for relaxation with modern décor and conveniences.
+                </p>
+                <p class="price-info">
+                    <strong>Price per Night:</strong> $115 <br>
+                    <strong>Total Cost:</strong> $<span class="total-cost" data-price="115">0.00</span>
+                </p>
+                <button class="book-now-button" onclick="window.location.href='Reservations.html';">Book Now</button>
+
+            </div>
+        </div>
+
+        <!-- Room Option 2 -->
+        <div class="room-container">
+            <img src="image2.jpg" alt="Queen Room" class="room-image">
+            <div class="room-details">
+                <h2>Queen Room</h2>
+                <hr class="divider">
+                <p class="description">
+                    A cozy room featuring a queen-sized bed, ideal for couples. 
+                    The room is equipped with a work desk, mini-fridge, and complimentary breakfast. 
+                    Modern lighting and furniture give a chic feel to your stay.
+                </p>
+                <p class="price-info">
+                    <strong>Price per Night:</strong> $130 <br>
+                    <strong>Total Cost:</strong> $<span class="total-cost" data-price="130">0.00</span>
+                </p>
+                <button class="book-now-button" onclick="window.location.href='Reservations.html';">Book Now</button>
+
+            </div>
+        </div>
+
+        <!-- Room Option 3 -->
+        <div class="room-container">
+            <img src="image3.jpg" alt="Double Queen Room" class="room-image">
+            <div class="room-details">
+                <h2>Double Queen Room</h2>
+                <hr class="divider">
+                <p class="description">
+                    A spacious room with two queen-sized beds for added comfort. 
+                    Enjoy complimentary high-speed internet, 24-hour room service, and an in-room coffee maker. 
+                    Ideal for larger groups or families who value space and comfort.
+                </p>
+                <p class="price-info">
+                    <strong>Price per Night:</strong> $145 <br>
+                    <strong>Total Cost:</strong> $<span class="total-cost" data-price="145">0.00</span>
+                </p>
+                <button class="book-now-button" onclick="window.location.href='Reservations.html';">Book Now</button>
+
+            </div>
+        </div>
+
+        <!-- Room Option 4 -->
+        <div class="room-container">
+            <img src="image4.jpg" alt="Luxury Suite" class="room-image">
+            <div class="room-details">
+                <h2>Luxury Suite</h2>
+                <hr class="divider">
+                <p class="description">
+                    Our Luxury Suite offers top-tier amenities including a private jacuzzi and lounge area. 
+                    Enjoy a plush king-sized bed, premium linens, and a mini-bar. 
+                    The suite boasts panoramic views of the city and comes with VIP service.
+                </p>
+                <p class="price-info">
+                    <strong>Price per Night:</strong> $155 <br>
+                    <strong>Total Cost:</strong> $<span class="total-cost" data-price="155">0.00</span>
+                </p>
+                <button class="book-now-button" onclick="window.location.href='Reservations.html';">Book Now</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Include JavaScript to calculate total cost -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- JavaScript for capturing and storing data -->
+<script>
+    window.onload = function() {
+        // Retrieve data from session storage
+        const roomType = sessionStorage.getItem('roomType');
+        const pricePerNight = sessionStorage.getItem('pricePerNight');
+        const checkInDate = sessionStorage.getItem('checkInDate');
+        const checkOutDate = sessionStorage.getItem('checkOutDate');
+        const numberOfGuests = sessionStorage.getItem('numberOfGuests');
+        const totalCost = sessionStorage.getItem('totalCost');
+        const imageSrc = sessionStorage.getItem('imageSrc');
+        const description = sessionStorage.getItem('description');
+
+        // Display the data in the appropriate HTML elements
+        document.getElementById('room-type').textContent = roomType;
+        document.getElementById('checkin-date').textContent = checkInDate;
+        document.getElementById('checkout-date').textContent = checkOutDate;
+        document.getElementById('number-of-guests').textContent = numberOfGuests;
+        document.getElementById('total-cost').textContent = `$${totalCost}`;
+        document.getElementById('room-image').src = imageSrc;
+        document.getElementById('room-description').textContent = description;
+    }
+</script>
+
+<!-- Example HTML structure for displaying the reservation details -->
+<div class="reservation-details">
+    <img id="room-image" src="" alt="Room Image">
+    <p id="room-description"></p>
+    <div class="reservation-item">
+        <label>Room Type:</label>
+        <p id="room-type"></p>
+    </div>
+    <div class="reservation-item">
+        <label>Check-in:</label>
+        <p id="checkin-date"></p>
+    </div>
+    <div class="reservation-item">
+        <label>Check-out:</label>
+        <p id="checkout-date"></p>
+    </div>
+    <div class="reservation-item">
+        <label>Number of Guests:</label>
+        <p id="number-of-guests"></p>
+    </div>
+    <div class="reservation-item">
+        <label>Total Cost:</label>
+        <p id="total-cost"></p>
+    </div>
+</div>
+

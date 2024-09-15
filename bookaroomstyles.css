@@ -1,0 +1,130 @@
+/* Book a Room CSS */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.booking-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.booking-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+/* Selection Container Styles */
+.selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.selection-container label {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.selection-container input[type="date"],
+.selection-container input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Room Container Styles */
+.room-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.room-container h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+/* Thin Line Divider */
+.divider {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px 0;
+    width: 90%;
+    align-self: center;
+}
+
+/* Description Styling */
+.room-details .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+/* Updated Description Styling */
+.room-details .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 60%;
+    text-align: left;  /* Align text to the left */
+}
+
+/* Price and Cost Styling */
+.price-info {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.price-info p {
+    margin: 0;
+}
+
+.book-now-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.book-now-button:hover {
+    background-color: #333;
+}
+
+/* Room Image Styling */
+.room-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
