@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="reservations.css">
+</head>
+<body>
+    <div class="landing-page" style="background-image: url('lodge-background.jpg');">
+        <div class="reservations-box">
+            <h1>Your Reservation</h1>
+            <div class="room-info">
+                <img src="room-image.jpg" alt="Room Image" class="room-image">
+                <div class="room-details">
+                    <h2>Double Full Room</h2> <!-- This will change dynamically based on the customer's choice -->
+                    <p>A comfortable room with two full-size beds, ideal for families.</p> <!-- Dynamic description -->
+                </div>
+            </div>
+            <div class="reservation-details">
+                <div class="reservation-item">
+                    <label>Reservation ID:</label>
+                    <p>12345</p> <!-- Dynamic -->
+                </div>
+                <div class="reservation-item">
+                    <label>Room Type:</label>
+                    <p>Double Full</p> <!-- Dynamic -->
+                </div>
+                <div class="reservation-item">
+                    <label>Check-in:</label>
+                    <p>2024-01-05</p> <!-- Dynamic -->
+                </div>
+                <div class="reservation-item">
+                    <label>Check-out:</label>
+                    <p>2024-01-08</p> <!-- Dynamic -->
+                </div>
+                <div class="reservation-item">
+                    <label>Total Cost:</label>
+                    <p>$345.00</p> <!-- Dynamic -->
+                </div>
+                <div class="reservation-item">
+                    <label>Number of Guests:</label>
+                    <p>3</p> <!-- Dynamic -->
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="modify-reservation-button" onclick="enableEdit()">Modify Reservation</button>
+                <button class="cancel-reservation-button">Cancel Reservation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add JavaScript for enabling modification -->
+    <script>
+        function enableEdit() {
+            const reservationItems = document.querySelectorAll('.reservation-item p');
+            reservationItems.forEach(item => {
+                const value = item.textContent;
+                item.outerHTML = `<input type="text" value="${value}">`;
+            });
+        }
+    </script>
+</body>
+</html>
