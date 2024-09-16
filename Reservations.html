@@ -2,63 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations - Moffat Bay Lodge</title>
     <link rel="stylesheet" href="reservations.css">
 </head>
 <body>
-    <div class="landing-page" style="background-image: url('lodge-background.jpg');">
-        <div class="reservations-box">
-            <h1>Your Reservation</h1>
-            <div class="room-info">
-                <img src="room-image.jpg" alt="Room Image" class="room-image">
-                <div class="room-details">
-                    <h2>Double Full Room</h2> <!-- This will change dynamically based on the customer's choice -->
-                    <p>A comfortable room with two full-size beds, ideal for families.</p> <!-- Dynamic description -->
-                </div>
+    <div class="booking-container">
+        <h1 class="booking-title">Your Reservation</h1>
+
+        <!-- Reservation Details -->
+        <div class="room-container">
+            <img id="room-image" src="" alt="Room Image" class="room-image">
+            <div class="room-details">
+                <h2 id="room-type">Room Type</h2>
+                <hr class="divider">
+                <p id="room-description" class="description">Room Description</p>
+                <p class="price-info"><strong>Price per Night:</strong> $<span id="price-per-night">0</span></p>
             </div>
-            <div class="reservation-details">
-                <div class="reservation-item">
-                    <label>Reservation ID:</label>
-                    <p>12345</p> <!-- Dynamic -->
-                </div>
-                <div class="reservation-item">
-                    <label>Room Type:</label>
-                    <p>Double Full</p> <!-- Dynamic -->
-                </div>
-                <div class="reservation-item">
-                    <label>Check-in:</label>
-                    <p>2024-01-05</p> <!-- Dynamic -->
-                </div>
-                <div class="reservation-item">
-                    <label>Check-out:</label>
-                    <p>2024-01-08</p> <!-- Dynamic -->
-                </div>
-                <div class="reservation-item">
-                    <label>Total Cost:</label>
-                    <p>$345.00</p> <!-- Dynamic -->
-                </div>
-                <div class="reservation-item">
-                    <label>Number of Guests:</label>
-                    <p>3</p> <!-- Dynamic -->
-                </div>
-            </div>
+        </div>
+
+        <!-- Modify Check-in/Check-out Dates and Number of Guests -->
+        <div class="selection-container">
+            <label for="checkin-date">Check-in Date:</label>
+            <input type="date" id="checkin-date" name="checkin-date">
+
+            <label for="checkout-date">Check-out Date:</label>
+            <input type="date" id="checkout-date" name="checkout-date">
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10">
+        </div>
+
+        <!-- Total Cost and Action Buttons -->
+        <div class="reservation-summary">
+            <p><strong>Total Cost:</strong> $<span id="total-cost">0.00</span></p>
             <div class="button-group">
-                <button class="modify-reservation-button" onclick="enableEdit()">Modify Reservation</button>
-                <button class="cancel-reservation-button">Cancel Reservation</button>
+                <button type="button" class="modify-reservation-button" onclick="calculateTotalCost()">Update Reservation</button>
+                <button type="button" class="cancel-reservation-button" onclick="location.href='BookARoom.html'">Cancel Reservation</button>
+                <button type="button" class="confirm-reservation-button" onclick="confirmReservation()">Confirm Reservation</button>
             </div>
         </div>
     </div>
 
-    <!-- Add JavaScript for enabling modification -->
-    <script>
-        function enableEdit() {
-            const reservationItems = document.querySelectorAll('.reservation-item p');
-            reservationItems.forEach(item => {
-                const value = item.textContent;
-                item.outerHTML = `<input type="text" value="${value}">`;
-            });
-        }
-    </script>
+    <!-- Include JavaScript for loading and confirming data -->
+    <script src="reservations.js"></script>
 </body>
 </html>

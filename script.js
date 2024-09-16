@@ -1,34 +1,49 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
-    const checkinDateInput = document.getElementById('checkin-date');
-    const checkoutDateInput = document.getElementById('checkout-date');
-    const totalCostElements = document.querySelectorAll('.total-cost');
+    // Book a Room Page: Store selected room details and user input
+    const bookNowButtons = document.querySelectorAll('.book-now-button');
 
-    function calculateTotalCost() {
-        const checkinDate = new Date(checkinDateInput.value);
-        const checkoutDate = new Date(checkoutDateInput.value);
+    bookNowButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const roomContainer = event.target.closest('.room-container');
+            const roomType = roomContainer.getAttribute('data-room');
+            const pricePerNight = roomContainer.getAttribute('data-price');
+            const description = roomContainer.getAttribute('data-description');
+            const imageSrc = roomContainer.getAttribute('data-image');
+            const checkinDate = document.getElementById('checkin-date').value;
+            const checkoutDate = document.getElementById('checkout-date').value;
+            const guests = document.getElementById('guests').value;
 
-        // Calculate the number of nights
-        const timeDifference = checkoutDate - checkinDate;
-        const millisecondsPerDay = 1000 * 60 * 60 * 24;
-        let numberOfNights = Math.round(timeDifference / millisecondsPerDay);
+            // Validate inputs
+            if (!checkinDate || !checkoutDate || !guests) {
+                alert('Please fill out all fields.');
+                return;
+            }
 
-        if (numberOfNights > 0) {
-            totalCostElements.forEach(element => {
-                const pricePerNight = parseFloat(element.getAttribute('data-price'));
-                const totalCost = numberOfNights * pricePerNight;
-                element.textContent = totalCost.toFixed(2);
-            });
-        } else {
-            // If dates are invalid, reset total cost to $0.00
-            totalCostElements.forEach(element => {
-                element.textContent = '0.00';
-            });
-        }
-    }
+            // Calculate total cost
+            const checkin = new Date(checkinDate);
+            const checkout = new Date(checkoutDate);
+            const millisecondsPerDay = 1000 * 60 * 60 * 24;
+            const nights = Math.round((checkout - checkin) / millisecondsPerDay);
 
-    // Add event listeners to date inputs
-    checkinDateInput.addEventListener('change', calculateTotalCost);
-    checkoutDateInput.addEventListener('change', calculateTotalCost);
+            if (nights <= 0) {
+                alert('Check-out date must be after check-in date.');
+                return;
+            }
+
+            const totalCost = nights * parseFloat(pricePerNight);
+
+            // Store reservation data in sessionStorage
+            sessionStorage.setItem('roomType', roomType);
+            sessionStorage.setItem('pricePerNight', pricePerNight);
+            sessionStorage.setItem('checkInDate', checkinDate);
+            sessionStorage.setItem('checkOutDate', checkoutDate);
+            sessionStorage.setItem('numberOfGuests', guests);
+            sessionStorage.setItem('totalCost', totalCost.toFixed(2));
+            sessionStorage.setItem('imageSrc', imageSrc);
+            sessionStorage.setItem('description', description);
+
+            // Redirect to Reservations page
+            window.location.href = 'Reservations.html';
+        });
+    });
 });
