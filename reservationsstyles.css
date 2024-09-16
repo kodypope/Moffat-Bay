@@ -1,95 +1,121 @@
-/* General reset */
-body, html {
-    height: 100%;
+/* Same styles from Book a Room for a cohesive layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-/* Landing page background */
-.landing-page {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.booking-container {
+    width: 90%;
+    margin: 0 auto;
 }
 
-/* Reservation box styling */
-.reservations-box {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    max-width: 700px;
-    width: 100%;
-    text-align: left;
-    position: relative;
-}
-
-/* Room info styling (image and details) */
-.room-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.room-image {
-    width: 150px;
-    height: 100px;
-    margin-right: 20px;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-.room-details {
-    max-width: 500px;
-}
-
-.room-details h2 {
-    font-size: 1.5em;
-    margin: 0;
-}
-
-.room-details p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Reservation details */
-.reservation-details {
-    margin-bottom: 30px;
-}
-
-.reservation-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.reservation-item label {
+.booking-title {
+    font-size: 36px;
     font-weight: bold;
-    width: 40%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
 }
 
-.reservation-item p {
+/* Room Container Styling */
+.room-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.room-container h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+/* Thin Line Divider */
+.divider {
+    border: none;
+    border-top: 1px solid black;
+    margin: 10px 0;
+    width: 90%;
+    align-self: center;
+}
+
+/* Description Styling */
+.room-details .description {
+    font-size: 16px;
+    margin-bottom: 10px;
     width: 60%;
+    text-align: left;
+}
+
+/* Price and Cost Styling */
+.price-info {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     text-align: right;
 }
 
-/* Button group */
-.button-group {
-    display: flex;
-    justify-content: flex-end;
+/* Room Image Styling */
+.room-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
 }
 
-.modify-reservation-button, .cancel-reservation-button {
+/* Selection Container Styling */
+.selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.selection-container label {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.selection-container input[type="date"],
+.selection-container input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.modify-reservation-button, 
+.cancel-reservation-button, 
+.confirm-reservation-button {
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 1em;
     cursor: pointer;
-    margin-left: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .modify-reservation-button {
@@ -98,8 +124,33 @@ body, html {
     border: none;
 }
 
+.modify-reservation-button:hover {
+    background-color: #333;
+}
+
 .cancel-reservation-button {
     background-color: white;
     color: black;
     border: 2px solid black;
+}
+
+.cancel-reservation-button:hover {
+    background-color: #f0f0f0;
+}
+
+.confirm-reservation-button {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.confirm-reservation-button:hover {
+    background-color: darkgreen;
+}
+
+/* Summary Styling */
+.reservation-summary p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
 }
