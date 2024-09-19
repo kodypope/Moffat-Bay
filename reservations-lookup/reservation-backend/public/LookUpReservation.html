@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look Up Reservation</title>
+    <link rel="stylesheet" href="LookUpStyles.css">
+</head>
+<body>
+    <div class="lookup-container">
+        <h1 class="lookup-title">Look Up Reservation</h1>
+
+        <!-- Search Form -->
+        <div class="search-container">
+            <div class="input-group">
+                <label for="reservation-id">Reservation ID:</label>
+                <input type="text" id="reservation-id" placeholder="Enter Reservation ID">
+            </div>
+            <div class="input-group">
+                <label for="guest-name">Guest Name:</label>
+                <input type="text" id="guest-name" placeholder="Enter Guest Name">
+            </div>
+            <div class="input-group">
+                <label for="checkin-date">Check-in Date:</label>
+                <input type="date" id="checkin-date">
+            </div>
+            <div class="input-group">
+                <label for="checkout-date">Check-out Date:</label>
+                <input type="date" id="checkout-date">
+            </div>
+            <button class="search-button" onclick="searchReservations()">Search</button>
+        </div>
+
+        <!-- Search Results Table -->
+        <div class="results-container">
+            <h2 class="results-title">Search Results</h2>
+            <p id="no-results-message" style="display: none;">No Active Reservations</p>
+            <table id="results-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Reservation ID</th>
+                        <th>Guest Name</th>
+                        <th>Room Type</th>
+                        <th>Check-in Date</th>
+                        <th>Check-out Date</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Dynamic search results will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Link to the script -->
+    <script src="lookupscript.js"></script>
+</body>
+</html>
