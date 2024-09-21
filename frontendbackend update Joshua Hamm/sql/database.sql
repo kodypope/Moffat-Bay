@@ -1,3 +1,9 @@
+-- Marie Battle
+-- Joshua Hamm
+-- Erik Hernandez
+-- Kody Pope
+-- 9-21-24
+
 CREATE DATABASE moffatbay;
 USE moffatbay;
 
