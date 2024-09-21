@@ -1,3 +1,9 @@
+// Marie Battle
+// Joshua Hamm
+// Erik Hernandez
+// Kody Pope
+// 9-21-24
+
 function searchReservations() {
     const reservationId = document.getElementById('reservation-id').value;
     const guestName = document.getElementById('guest-name').value;
