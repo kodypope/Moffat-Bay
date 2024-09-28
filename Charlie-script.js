@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sessionStorage.setItem('description', description);
 
             // Redirect to Reservations page
-            window.location.href = 'Reservations.html';
+            window.location.href = "Charlie-Reservations.html";
         });
     });
 });
