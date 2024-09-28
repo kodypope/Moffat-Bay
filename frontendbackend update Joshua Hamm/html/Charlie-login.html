@@ -10,7 +10,7 @@ Kody Pope
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page - Moffat Bay Lodge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href=" Charlie-styles.css">
 </head>
 <body>
     <div class="landing-page" style="background-image: url('images/image1.jpg');">
@@ -39,9 +39,15 @@ Kody Pope
                     <li>Complimentary in-room WiFi.</li>
                     <li>Effortless mobile check-in and additional perks.</li>
                 </ul>
-                <button class="join-now-button">Join Now</button>
+                <button class="join-now-button" onclick="blurBackground()">Join Now</button>
             </div>
         </div>
     </div>
+
+    <script>
+        function blurBackground() {
+            document.querySelector('.landing-page').classList.add('blur-effect');
+        }
+    </script>
 </body>
 </html>
