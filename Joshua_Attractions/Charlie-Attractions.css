@@ -1,0 +1,107 @@
+/* Marie Battle
+Joshua Hamm
+Erik Hernandez
+Kody Pope
+9-21-24 */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e5d5; /* Eggshell background */
+    color: #3c3f3f; /* Dark olive text */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b8c54; /* Olive header */
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    max-height: 50px;
+}
+
+.nav-top {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+}
+
+.nav-top button {
+    background-color: #d3d3d3; /* Light grey button */
+    color: #3c3f3f; /* Dark olive text */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #3c3f3f; /* Dark olive text */
+    margin: 20px 0;
+}
+
+.attractions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.attraction-card {
+    background-color: #8b8c54; /* Olive card */
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b8c54; /* Olive review card */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.review-content {
+    flex-grow: 1;
+    text-align: center;
+    color: #f0e5d5; /* Eggshell text for review */
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #f0e5d5; /* Eggshell arrows */
+    cursor: pointer;
+}
+
+.banner {
+    background-color: #8b8c54; /* Olive banner */
+    color: #f0e5d5; /* Eggshell text */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+}
