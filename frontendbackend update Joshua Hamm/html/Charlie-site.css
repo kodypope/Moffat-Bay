@@ -18,6 +18,12 @@ html {
   font-family: Arial, sans-serif;
 }
 
+
+
+
+
+
+
 /* Landing page styles */
 .modern-landing-page {
   height: 100%;
@@ -162,7 +168,7 @@ footer {
   /* position: fixed; */
   /* width: 100%; */
   /* bottom: 0; */
-        /* margin-top: 5px; */ */
+        /* margin-top: 5px; */
 }
 
 footer p {
@@ -364,6 +370,16 @@ main {
 .image-grid img {
   width: 100%; /* Ensures images fill their grid cells */
   height: auto; /* Maintains aspect ratio */
+
+
+
+    display: flex;
+    flex-wrap: wrap;
+
+    flex: 1 1 200px;
+    height: 200px;
+
+
 }
 
 .our-story {
