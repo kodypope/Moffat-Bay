@@ -11,12 +11,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
-    background-color: white;
+    color: #3c3f3f;
+    background-color: #f0e5d5;
 }
 
 .header {
-    background: #f1f1f1;
+    background: #f0e5d5;
     padding: 10px;
     display: flex;
     justify-content: flex-end;
@@ -38,7 +38,7 @@ body {
 
 .header-links a {
     text-decoration: none;
-    color: black;
+    color: #3c3f3f;
 }
 
 .navbar img {
@@ -95,6 +95,9 @@ body {
     font-size: 14px;
     color: #3c3f3f;
 }
+.column p a {
+    color: #3c3f3f;
+}
 
 /* the map was added by Kody */
 
@@ -117,7 +120,7 @@ body {
     max-width: 40px;
 }
 
-.footer {
+.footer .first {
     /* background-color: black; */
     background-color: #8b8c54;
     padding: 10px 20px;
@@ -127,13 +130,34 @@ body {
 .footer a {
     text-decoration: none;
     /* color: white; */
-    color: #f1f1f1;
+    color: #3c3f3f;
     margin: 0 10px;
 }
 
-.footer p {
+.first p {
     font-size: 14px;
     /* color: #afafaf; */
-    color: #f1f1f1;
+    color: #3c3f3f;
+    /* color: blue; */
     margin: 10px 0 0;
+}
+
+.names p {
+    font-size: 14px;
+    text-align: center;
+    /* color: #afafaf; */
+    color: #3c3f3f;
+    /* color: blue; */
+    margin: 10px 0 0;
+}
+
+.font1 {
+font: arial;
+}
+
+.comfortaa-font2 {
+font-family: "Comfortaa", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
 }
