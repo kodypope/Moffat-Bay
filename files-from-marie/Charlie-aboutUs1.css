@@ -1,8 +1,11 @@
-/* Marie Battle
+/* 
+Team Charlie
+Marie Battle
 Joshua Hamm
 Erik Hernandez
 Kody Pope
-9-21-24 */
+9-21-24 
+*/
 
 body {
     font-family: Arial, sans-serif;
@@ -39,11 +42,12 @@ body {
 }
 
 .navbar img {
-    height: 50px;
+    height: 100px;
 }
 
 .navbar {
-    background-color: #e6dfa4; /* Adjust if needed */
+    background-color: #e6dfa4;
+    background-color: #8b8c54; /* Adjust if needed */
     padding: 10px 20px;
 }
 
@@ -56,12 +60,16 @@ body {
 .navbar .menu a {
     text-decoration: none;
     color: black;
+    color: #ffffff; /* White text for links */
     margin: 0 15px;
     font-size: 16px;
 }
 
 .navbar .menu a.btn {
-    background-color: #faf8f0;
+    /* background-color: #faf8f0; */
+    /* New Color of Button */
+    background-color: #d3d3d3;
+    color: #3c3f3f;
     padding: 5px 15px;
     border-radius: 5px;
 }
@@ -70,7 +78,9 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 50px;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #f0e5d5;
+    color: #3c3f3f;
 }
 
 .column {
@@ -78,27 +88,52 @@ body {
 }
 
 .column h2 {
-    color: white;
+    color: #3c3f3f;
 }
 
 .column p {
     font-size: 14px;
+    color: #3c3f3f;
+}
+
+/* the map was added by Kody */
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pin-drop img {
+    max-width: 40px;
 }
 
 .footer {
-    background-color: black;
+    /* background-color: black; */
+    background-color: #8b8c54;
     padding: 10px 20px;
     text-align: center;
 }
 
 .footer a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
+    color: #f1f1f1;
     margin: 0 10px;
 }
 
 .footer p {
     font-size: 14px;
-    color: #afafaf;
+    /* color: #afafaf; */
+    color: #f1f1f1;
     margin: 10px 0 0;
 }

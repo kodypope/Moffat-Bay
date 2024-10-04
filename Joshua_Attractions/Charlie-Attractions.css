@@ -1,4 +1,5 @@
-/* Marie Battle
+/* Team Charlie
+Marie Battle
 Joshua Hamm
 Erik Hernandez
 Kody Pope
@@ -23,7 +24,7 @@ body {
 .logo {
     width: 100px;
     height: auto;
-    max-height: 50px;
+    max-height: 100px;
 }
 
 .nav-top {
@@ -70,6 +71,14 @@ body {
 .attraction-image {
     width: 100%;
     border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.reviews-section h2 {
+    text-align: center;
 }
 
 .review-card {
