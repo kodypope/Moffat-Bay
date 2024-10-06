@@ -1,4 +1,5 @@
-/* Marie Battle
+/* Team Charlie
+Marie Battle
 Joshua Hamm
 Erik Hernandez
 Kody Pope
@@ -23,7 +24,7 @@ body {
 .logo {
     width: 100px;
     height: auto;
-    max-height: 50px;
+    max-height: 100px;
 }
 
 .nav-top {
@@ -72,6 +73,14 @@ body {
     border-radius: 8px;
 }
 
+h1 {
+    text-align: center;
+}
+
+.reviews-section h2 {
+    text-align: center;
+}
+
 .review-card {
     display: flex;
     align-items: center;
@@ -104,4 +113,112 @@ body {
     padding: 10px 0;
     position: relative;
     bottom: 0;
+}
+
+
+.footer .first {
+    /* background-color: black; */
+    background-color: #8b8c54;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    /* color: white; */
+    color: #3c3f3f;
+    margin: 0 10px;
+}
+
+.first p {
+    font-size: 14px;
+    /* color: #afafaf; */
+    color: #3c3f3f;
+    /* color: blue; */
+    margin: 10px 0 0;
+}
+
+.names p {
+    font-size: 14px;
+    text-align: center;
+    /* color: #afafaf; */
+    color: #3c3f3f;
+    /* color: blue; */
+    margin: 10px 0 0;
+}
+
+.font1 {
+font: arial;
+}
+
+.comfortaa-font2 {
+font-family: "Comfortaa", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+.header {
+    background: #f0e5d5;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.header-links li {
+    display: inline;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #3c3f3f;
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar {
+    background-color: #e6dfa4;
+    background-color: #8b8c54; /* Adjust if needed */
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    color: #ffffff; /* White text for links */
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar .menu a.btn {
+    /* background-color: #faf8f0; */
+    /* New Color of Button */
+    background-color: #d3d3d3;
+    color: #3c3f3f;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.center-it {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
 }
