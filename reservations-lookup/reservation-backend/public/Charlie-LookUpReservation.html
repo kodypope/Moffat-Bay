@@ -1,18 +1,179 @@
-<!-- Marie Battle
+/* Marie Battle
 Joshua Hamm
 Erik Hernandez
 Kody Pope
-9-21-24 -->
+9-21-24 */
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Look Up Reservation</title>
-    <link rel="stylesheet" href="Charlie-LookUpStyles.css">
+    <title>Moffat Bay Lodge - Look Up Reservation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6d6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Navigation Bar */
+        .navbar {
+            background-color: #5a5c41;
+            overflow: hidden;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left img {
+            width: 100px; /* Placeholder size for the logo */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .navbar-left h1 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .navbar-right a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            margin-left: 10px;
+        }
+
+        .navbar-right a:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Page Layout */
+        .lookup-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lookup-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #5a5c41;
+        }
+
+        /* Search Form Styles */
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            flex: 1;
+            margin: 0 10px;
+            min-width: 250px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #5a5c41;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .search-button:hover {
+            background-color: #444;
+        }
+
+        /* Results Table Styles */
+        .results-container {
+            margin-top: 50px;
+        }
+
+        .results-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #5a5c41;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="#" alt="Moffat Bay Lodge Logo"> <!-- Placeholder for the logo -->
+            <h1>Moffat Bay Lodge</h1>
+        </div>
+        <div class="navbar-right">
+            <a href="#">Attractions</a>
+            <a href="#">Photo Gallery</a>
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Lookup Reservation Form -->
     <div class="lookup-container">
         <h1 class="lookup-title">Look Up Reservation</h1>
 
@@ -59,7 +220,57 @@ Kody Pope
         </div>
     </div>
 
-    <!-- Link to the script -->
-    <script src="lookupscript.js"></script>
+    <script>
+        function searchReservations() {
+            const reservationId = document.getElementById('reservation-id').value;
+            const guestName = document.getElementById('guest-name').value;
+            const checkinDate = document.getElementById('checkin-date').value;
+            const checkoutDate = document.getElementById('checkout-date').value;
+
+            // Create the query string
+            let queryString = '?';
+            if (reservationId) queryString += `reservationId=${reservationId}&`;
+            if (guestName) queryString += `guestName=${guestName}&`;
+            if (checkinDate) queryString += `checkinDate=${checkinDate}&`;
+            if (checkoutDate) queryString += `checkoutDate=${checkoutDate}&`;
+
+            console.log(`Query String: ${queryString}`); // Debugging line
+
+            // Fetch the data
+            fetch(`http://localhost:3000/lookup${queryString}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data received:', data); // Debugging line
+                    
+                    const resultsTable = document.getElementById('results-table');
+                    const noResultsMessage = document.getElementById('no-results-message');
+                    const resultsBody = document.getElementById('results-body');
+
+                    // Clear previous results
+                    resultsBody.innerHTML = '';
+                    
+                    if (data.length === 0) {
+                        noResultsMessage.style.display = 'block';
+                        resultsTable.style.display = 'none';
+                    } else {
+                        noResultsMessage.style.display = 'none';
+                        resultsTable.style.display = 'table';
+                        data.forEach(reservation => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${reservation.reservation_id}</td>
+                                <td>${reservation.guest_name}</td>
+                                <td>${reservation.room_type}</td>
+                                <td>${new Date(reservation.check_in_date).toLocaleDateString()}</td>
+                                <td>${new Date(reservation.check_out_date).toLocaleDateString()}</td>
+                                <td>${reservation.total_cost.toFixed(2)}</td>
+                            `;
+                            resultsBody.appendChild(row);
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching reservations:', error));
+        }
+    </script>
 </body>
 </html>
