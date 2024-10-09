@@ -2,54 +2,335 @@
 Joshua Hamm
 Erik Hernandez
 Kody Pope
-9-21-24 -->
+10-9-24 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations - Moffat Bay Lodge</title>
-    <link rel="stylesheet" href="Charlie-reservations.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e5d8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        .top-nav {
+            background-color: #b5a485;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-nav img {
+            height: 50px;
+        }
+
+        .top-nav nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-nav nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .top-nav nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .header-button {
+            background-color: grey;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .header-button:hover {
+            background-color: #7e7e7e;
+        }
+
+        .booking-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #d6d3bc;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .booking-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #3b6d4f;
+        }
+
+        /* Room Container */
+        .room-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .room-image {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .room-details {
+            flex: 1;
+        }
+
+        .divider {
+            border: 1px solid #3b6d4f;
+            margin: 10px 0;
+        }
+
+        .price-info {
+            font-size: 18px;
+            color: #3b6d4f;
+        }
+
+        /* Selection Container for check-in, check-out, guests */
+        .selection-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .selection-container label {
+            font-weight: bold;
+        }
+
+        .selection-container input[type="date"],
+        .selection-container input[type="number"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Reservation summary and buttons */
+        .reservation-summary {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .modify-reservation-button, 
+        .cancel-reservation-button, 
+        .confirm-reservation-button {
+            background-color: #3b6d4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modify-reservation-button:hover,
+        .cancel-reservation-button:hover,
+        .confirm-reservation-button:hover {
+            background-color: #2b503b;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #b5a485;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .button-container {
+            background-color: #b5a485;
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        .footer-buttons {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-buttons li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-buttons li a {
+            text-decoration: none;
+            color: white; /* White font color for footer buttons */
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .footer-buttons li a:hover {
+            background-color: #3b6d4f;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .room-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="top-nav">
+            <img src="logo.jpg" alt="Moffat Bay Lodge Logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Attractions</a></li>
+                    <li><a href="#">Photo Gallery</a></li>
+                </ul>
+            </nav>
+            <button class="header-button">Book A Reservation</button>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
     <div class="booking-container">
-        <h1 class="booking-title">Your Reservation</h1>
+        <h1 class="booking-title">Your Reservations</h1>
 
         <!-- Reservation Details -->
         <div class="room-container">
-            <img id="room-image" src="" alt="Room Image" class="room-image">
+            <img id="room-image" src="image1.jpg" alt="Room Image" class="room-image">
             <div class="room-details">
                 <h2 id="room-type">Room Type</h2>
                 <hr class="divider">
-                <p id="room-description" class="description">Room Description</p>
-                <p class="price-info"><strong>Price per Night:</strong> $<span id="price-per-night">0</span></p>
+                <p id="room-description" class="description">A comfortable room with all amenities you need for a pleasant stay.</p>
+                <p class="price-info"><strong>Price per Night:</strong> $<span id="price-per-night">150</span></p>
             </div>
         </div>
 
         <!-- Modify Check-in/Check-out Dates and Number of Guests -->
         <div class="selection-container">
-            <label for="checkin-date">Check-in Date:</label>
-            <input type="date" id="checkin-date" name="checkin-date">
-
-            <label for="checkout-date">Check-out Date:</label>
-            <input type="date" id="checkout-date" name="checkout-date">
-
-            <label for="guests">Number of Guests:</label>
-            <input type="number" id="guests" name="guests" min="1" max="10">
+            <div>
+                <label for="checkin-date">Check-in Date:</label><br>
+                <input type="date" id="checkin-date" name="checkin-date">
+            </div>
+            <div>
+                <label for="checkout-date">Check-out Date:</label><br>
+                <input type="date" id="checkout-date" name="checkout-date">
+            </div>
+            <div>
+                <label for="guests">Number of Guests:</label><br>
+                <input type="number" id="guests" name="guests" min="1" max="10">
+            </div>
         </div>
 
         <!-- Total Cost and Action Buttons -->
         <div class="reservation-summary">
             <p><strong>Total Cost:</strong> $<span id="total-cost">0.00</span></p>
             <div class="button-group">
-                <button type="button" class="modify-reservation-button" onclick="calculateTotalCost()">Update Reservation</button>
-                <button type="button" class="cancel-reservation-button" onclick="location.href='Charlie-BookARoom.html'">Cancel Reservation</button>
-                <button type="button" class="confirm-reservation-button" onclick="confirmReservation()">Confirm Reservation</button>
+                <button class="modify-reservation-button">Update Reservation</button>
+                <button class="cancel-reservation-button">Cancel Reservation</button>
+                <button class="confirm-reservation-button">Confirm Reservation</button>
             </div>
         </div>
     </div>
 
-    <!-- Include JavaScript for loading and confirming data -->
-    <script src="Charlie-reservations.js"></script>
-</body>
-</html>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Our Story</p>
+        <p>Nestled in the serene beauty of Washington State, a cozy lodge stay offers breathtaking views of misty mountains and evergreen forests. Wake up to fresh air, enjoy warm fires, and explore scenic trails. Relax in comfort, sip hot cocoa, and listen to the soothing sounds of nature—pure Pacific Northwest bliss!</p>
+    </footer>
+
+    <!-- Additional Buttons Container -->
+    <div class="button-container">
+        <ul class="footer-buttons">
+            <li><a href="#">Attractions</a></li>
+            <li><a href="#">Photo Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+    </div>
+
+    <!-- Copyright -->
+    <div style="text-align: center; margin-top: 5px;">
+        © 2024; Designed by Team Charlie
+    </div>
+
+    <!-- JavaScript to retrieve data from session storage and manage reservation -->
+    <script>
+        window.onload = function() {
+            // Retrieve data from session storage
+            const roomType = sessionStorage.getItem('roomType');
+            const pricePerNight = sessionStorage.getItem('pricePerNight');
+            const checkInDate = sessionStorage.getItem('checkInDate');
+            const checkOutDate = sessionStorage.getItem('checkOutDate');
+            const numberOfGuests = sessionStorage.getItem('numberOfGuests');
+            const totalCost = sessionStorage.getItem('totalCost');
+            const imageSrc = sessionStorage.getItem('imageSrc');
+            const description = sessionStorage.getItem('description');
+
+            // Display the data in the appropriate HTML elements
+    // Display the data in the appropriate HTML elements
+    document.getElementById('room-type').textContent = roomType;
+    document.getElementById('price-per-night').textContent = pricePerNight;
+    document.getElementById('checkin-date').value = checkInDate;
+    document.getElementById('checkout-date').value = checkOutDate;
+    document.getElementById('guests').value = numberOfGuests;
+    document.getElementById('total-cost').textContent = totalCost;
+    document.getElementById('room-image').src = imageSrc;
+    document.getElementById('room-description').textContent = description;
+};
+
+// Function to recalculate total cost
+function calculateTotalCost() {
+    const pricePerNight = parseFloat(sessionStorage.getItem('pricePerNight'));
+    const checkInDate = new Date(document.getElementById('checkin-date').value);
+    const checkOutDate = new Date(document.getElementById('checkout-date').value);
+    const timeDifference = checkOutDate - checkInDate;
+    const millisecondsPerDay = 1000 * 60 * 60 * 24;
+    let numberOfNights = Math.round(timeDifference / millisecondsPerDay);
+
+    if (numberOfNights > 0) {
+        const totalCost = numberOfNights * pricePerNight;
+        document.getElementById('total-cost').textContent = totalCost.toFixed(2);
+        sessionStorage.setItem('totalCost', totalCost.toFixed(2));
+    } else {
+        alert('Check-out date must be after check-in date.');
+        document.getElementById('total-cost').textContent = '0.00';
+    }
+}
+
+// Function to confirm the reservation
+function confirmReservation() {
+    alert("Congratulations, you are now booked. A receipt has been sent to your email.");
+    // Clear session storage after confirmation
+    sessionStorage.clear();
+    // Optionally redirect to a confirmation page
+    // window.location.href = 'Confirmation.html';
+}
