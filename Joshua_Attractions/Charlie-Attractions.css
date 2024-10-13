@@ -121,6 +121,7 @@ h1 {
 .footer .first {
     /* background-color: black; */
     background-color: #8b8c54;
+    /* background-color: blue; */
     padding: 10px 20px;
     text-align: center;
 }
@@ -138,6 +139,10 @@ h1 {
     color: #3c3f3f;
     /* color: blue; */
     margin: 10px 0 0;
+}
+
+.names {
+    background-color: none;
 }
 
 .names p {
@@ -233,3 +238,17 @@ font-style: normal;
     background-color: blue
     ;
 } */
+
+
+
+.bnt-spacing {
+  /* width: 30%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

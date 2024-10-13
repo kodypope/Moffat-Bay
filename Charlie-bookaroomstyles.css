@@ -233,3 +233,17 @@ font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;
 }
+
+
+
+.bnt-spacing {
+  /* width: 30%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
