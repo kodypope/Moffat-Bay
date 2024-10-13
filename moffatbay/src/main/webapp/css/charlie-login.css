@@ -1,0 +1,279 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f0e5d5;
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Login Box */
+.login-box {
+    display: flex;
+    background-color: #f4f3f3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    max-width: 850px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.login-left {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.login-left h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-left h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    display: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Sign-in Button */
+.signin-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    width: auto;
+    margin: 20px 0;
+}
+
+/* Remember Me and Forgot Password */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #007BFF;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Password Toggle */
+.password-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007BFF;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+/* Login Right Section */
+.login-right {
+    flex: 1;
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-right img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.login-right p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-right ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.login-right li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.join-now-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    background: #f0e5d5;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.header-links li {
+    display: inline;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #3c3f3f;
+}
+
+/* Navbar Section */
+.navbar img {
+    height: 100px;
+}
+
+.navbar {
+    background-color: #8b8c54;
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar .menu a.btn {
+    background-color: #d3d3d3;
+    color: #3c3f3f;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+.footer .first {
+    background-color: #8b8c54;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #3c3f3f;
+    margin: 0 10px;
+}
+
+.names p {
+    font-size: 14px;
+    text-align: center;
+    color: #3c3f3f;
+    margin: 10px 0 0;
+}
+
+.font1 {
+    font: arial;
+}
+
+.comfortaa-font2 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.bnt-spacing {
+  /* width: 30%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

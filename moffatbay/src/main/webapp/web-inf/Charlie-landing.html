@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Moffat Bay Lodge</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0e5d5;
+        color: #3c3f3f;
+      }
+      .navbar {
+        background-color: #8b8c54;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-links {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #3c3f3f;
+        padding: 10px 20px;
+        background-color: #d3d3d3;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .banner {
+        background-image: url('img/banner.jpg');
+        height: 300px;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .banner h1 {
+        color: white;
+        font-size: 3em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .content {
+        text-align: center;
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 900px;
+      }
+      .card-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+      }
+      .card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      .footer {
+        background-color: #8b8c54;
+        text-align: center;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="Charlie-landing.html">
+        <img src="logo.jpg" alt="Moffat Bay Lodge Logo" height="50" />
+      </a>
+      <div class="nav-links">
+        <a href="Charlie-Attractions.html">Attractions</a>
+        <a href="Charlie-contactus.html">Contact Us</a>
+        <a href="Charlie-reservations.html">Reservations</a>
+        <a href="Charlie-login.html" class="btn">Login</a>
+        <a href="Charlie-register.html" class="btn">Register</a>
+      </div>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner">
+      <h1>Welcome to Moffat Bay Lodge</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <h2>Enjoy the Best of Nature</h2>
+      <p>Experience tranquility and luxury at Moffat Bay Lodge. Nestled in nature, our lodge offers top-tier amenities and unforgettable views.</p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="canoeing.jpg" alt="Canoeing" />
+          <h3>Go Canoeing</h3>
+          <p>Paddle through serene waters and explore the natural beauty of the bay.</p>
+        </div>
+        <div class="card">
+          <img src="winery.jpg" alt="Winery" />
+          <h3>Our Famous Winery</h3>
+          <p>Visit our vineyards and enjoy our exclusive wine selections.</p>
+        </div>
+        <div class="card">
+          <img src="whale_watching.jpg" alt="Whale Watching" />
+          <h3>Whale Watching</h3>
+          <p>Witness majestic whales up close with our guided tours.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2024; Designed by Team Charlie</p>
+    </div>
+  </body>
+</html>

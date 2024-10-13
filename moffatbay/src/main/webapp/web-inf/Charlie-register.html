@@ -1,0 +1,68 @@
+<!-- Team Charlie: Marie Battle, Joshua Hamm, Erik Hernandez, Kody Pope 9-21-24 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="Charlie-styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu">
+        <a href="Charlie-landing.html">
+          <img src="img/logo.jpg" alt="Moffat Bay Lodge Logo" />
+        </a>
+        <div class="nav-links">
+          <a href="Charlie-Attractions.html">Attractions</a>
+          <a href="Charlie-contactus.html">Contact Us</a>
+          <a href="Charlie-reservations.html">Reservations</a>
+        </div>
+        <div class="nav-links">
+          <a href="Charlie-login.html" class="btn">Login</a>
+          <a href="Charlie-register.html" class="btn">Register</a>
+          <a href="Charlie-BookARoom.html" class="btn">Book A Reservation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-container">
+      <h1>Register</h1>
+      <form method="POST" action="/register">
+        <div class="input-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="input-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="names">
+        <p class="font1">
+          © 2024; Designed by <span class="comfortaa-font2">Team Charlie</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
