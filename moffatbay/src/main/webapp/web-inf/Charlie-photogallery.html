@@ -1,0 +1,121 @@
+<!-- Team Charlie
+Marie Battle
+Joshua Hamm
+Erik Hernandez
+Kody Pope
+9-21-24  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery - Moffat Bay Lodge</title>
+    <style>
+      /* Embedded CSS */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0e5d5;
+        color: #3c3f3f;
+      }
+      .navbar {
+        background-color: #8b8c54;
+        padding: 10px 20px;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-links {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 15px;
+        background-color: #d3d3d3;
+        border-radius: 5px;
+      }
+      .btn {
+        background-color: #d3d3d3;
+        color: #3c3f3f;
+      }
+      .gallery-container {
+        text-align: center;
+        margin: 50px auto;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+      }
+      .gallery-grid img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .footer {
+        background-color: #8b8c54;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .names p {
+        font-size: 14px;
+      }
+      .comfortaa-font2 {
+        font-family: "Comfortaa", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <div class="menu">
+        <a href="Charlie-landing.html">
+          <img src="img/logo.jpg" alt="Moffat Bay Lodge Logo" />
+        </a>
+        <div class="nav-links">
+          <a href="Charlie-Attractions.html">Attractions</a>
+          <a href="Charlie-contactus.html">Contact Us</a>
+          <a href="Charlie-reservations.html">Reservations</a>
+        </div>
+        <div class="nav-links">
+          <a href="Charlie-login.html" class="btn">Login</a>
+          <a href="Charlie-register.html" class="btn">Register</a>
+          <a href="Charlie-BookARoom.html" class="btn">Book A Reservation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo Gallery Content -->
+    <div class="gallery-container">
+      <h1>Photo Gallery</h1>
+      <div class="gallery-grid">
+        <img src="img/photo1.jpg" alt="Gallery Image 1" />
+        <img src="img/photo2.jpg" alt="Gallery Image 2" />
+        <img src="img/photo3.jpg" alt="Gallery Image 3" />
+        <img src="img/photo4.jpg" alt="Gallery Image 4" />
+        <img src="img/photo5.jpg" alt="Gallery Image 5" />
+        <img src="img/photo6.jpg" alt="Gallery Image 6" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="names">
+        <p class="font1">© 2024; Designed by <span class="comfortaa-font2">Team Charlie</span></p>
+      </div>
+    </div>
+  </body>
+</html>

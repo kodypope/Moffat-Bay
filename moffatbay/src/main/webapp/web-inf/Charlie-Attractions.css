@@ -1,0 +1,254 @@
+/* Team Charlie
+Marie Battle
+Joshua Hamm
+Erik Hernandez
+Kody Pope
+9-21-24 */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e5d5;
+    color: #3c3f3f; /* Dark olive text */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b8c54; /* Olive header */
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    max-height: 100px;
+}
+
+.nav-top {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+}
+
+.nav-top button {
+    background-color: #d3d3d3; /* Light grey button */
+    color: #3c3f3f; /* Dark olive text */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #3c3f3f; /* Dark olive text */
+    margin: 20px 0;
+}
+
+.attractions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0e5d5;
+}
+
+.attraction-card {
+    background-color: #8b8c54; /* Olive card */
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.reviews-section h2 {
+    text-align: center;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b8c54; /* Olive review card */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.review-content {
+    flex-grow: 1;
+    text-align: center;
+    color: #f0e5d5; /* Eggshell text for review */
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #f0e5d5; /* Eggshell arrows */
+    cursor: pointer;
+}
+
+.banner {
+    background-color: #8b8c54; /* Olive banner */
+    color: #f0e5d5; /* Eggshell text */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+}
+
+
+.footer .first {
+    /* background-color: black; */
+    background-color: #8b8c54;
+    /* background-color: blue; */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    /* color: white; */
+    color: #3c3f3f;
+    margin: 0 10px;
+}
+
+.first p {
+    font-size: 14px;
+    /* color: #afafaf; */
+    color: #3c3f3f;
+    /* color: blue; */
+    margin: 10px 0 0;
+}
+
+.names {
+    background-color: none;
+}
+
+.names p {
+    font-size: 14px;
+    text-align: center;
+    /* color: #afafaf; */
+    color: #3c3f3f;
+    /* color: blue; */
+    margin: 10px 0 0;
+}
+
+
+
+.font1 {
+font: arial;
+}
+
+.comfortaa-font2 {
+font-family: "Comfortaa", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+.header {
+    background: #f0e5d5;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+}
+
+.header-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.header-links li {
+    display: inline;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #3c3f3f;
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar {
+    background-color: #e6dfa4;
+    background-color: #8b8c54; /* Adjust if needed */
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    color: #ffffff; /* White text for links */
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.navbar .menu a.btn {
+    /* background-color: #faf8f0; */
+    /* New Color of Button */
+    background-color: #d3d3d3;
+    color: #3c3f3f;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.center-it {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+
+/* 
+.back-color {
+    background-color: blue
+    ;
+} */
+
+
+
+.bnt-spacing {
+  /* width: 30%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
